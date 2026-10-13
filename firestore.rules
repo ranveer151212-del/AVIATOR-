@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function signedIn(){return request.auth != null;}
+  function isAdmin(){return signedIn() && exists(/databases/$(database)/documents/users/$(request.auth.uid)) && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == "admin";}
+  match /users/{uid} {
+   allow get: if signedIn() && (request.auth.uid == uid || isAdmin());
+   allow list: if isAdmin();
+   allow create: if signedIn() && request.auth.uid == uid && request.resource.data.role == "user" && request.resource.data.email == request.auth.token.email;
+   allow update, delete: if isAdmin();
+  }
+  match /history/{id} {
+   allow read: if signedIn();
+   allow create: if signedIn() && request.resource.data.createdBy == request.auth.uid && request.resource.data.multiplier is number && request.resource.data.multiplier >= 1 && request.resource.data.multiplier <= 1000000 && request.resource.data.source in ["manual","configured-api"];
+   allow update, delete: if isAdmin();
+  }
+ }
+}

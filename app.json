@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Aviator History Lab",
+    "slug": "aviator-history-lab",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.store",
+      "googleServicesFile": "./google-services.json"
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/analytics"
+    ]
+  }
+}

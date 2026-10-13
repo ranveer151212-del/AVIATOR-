@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "710265961545",
+    "firebase_url": "https://store-fd106-default-rtdb.firebaseio.com",
+    "project_id": "store-fd106",
+    "storage_bucket": "store-fd106.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710265961545:android:40bc5ad95823001c021398",
+        "android_client_info": {
+          "package_name": "com.store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnamqy38ur89GJfo_FTGG4cfP78fYcVl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710265961545:android:287a2041e0a8e7e3021398",
+        "android_client_info": {
+          "package_name": "com.store.build"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnamqy38ur89GJfo_FTGG4cfP78fYcVl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
